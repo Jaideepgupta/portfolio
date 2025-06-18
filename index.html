@@ -1,98 +1,85 @@
-:root {
-  --bg-color: #0f172a;
-  --text-color: #f8fafc;
-  --card-bg: #1e293b;
-  --accent: #0ea5e9;
-}
-[data-theme='light'] {
-  --bg-color: #f1f5f9;
-  --text-color: #0f172a;
-  --card-bg: #e2e8f0;
-  --accent: #2563eb;
-}
-* {
-  margin: 0; padding: 0; box-sizing: border-box;
-  font-family: 'JetBrains Mono', monospace;
-}
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  line-height: 1.6;
-  scroll-behavior: smooth;
-}
-header {
-  text-align: center;
-  padding: 2rem;
-}
-header img {
-  width: 150px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-}
-h1 {
-  font-size: 2.5rem;
-}
-p.tagline {
-  font-size: 1.2rem;
-  color: var(--accent);
-}
-section {
-  padding: 3rem 2rem;
-  max-width: 960px;
-  margin: auto;
-}
-.projects, .skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-.card {
-  background: var(--card-bg);
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 0.5rem var(--accent);
-  transition: transform 0.3s ease;
-  text-decoration: none;
-  color: inherit;
-}
-.card:hover {
-  transform: scale(1.05);
-}
-.btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
-  background: var(--accent);
-  color: white;
-  border: none;
-  border-radius: 0.3rem;
-  text-decoration: none;
-}
-footer {
-  text-align: center;
-  padding: 2rem;
-  color: var(--text-color);
-}
-.theme-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background: var(--card-bg);
-  border: none;
-  padding: 0.5rem;
-  border-radius: 50%;
-  color: var(--accent);
-  cursor: pointer;
-}
-input, textarea {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border-radius: 0.5rem;
-  border: none;
-}
-form {
-  background: var(--card-bg);
-  padding: 2rem;
-  border-radius: 1rem;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaideep Gupta | Data Analyst</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body data-theme="dark">
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <img src="banner.png" alt="Jaideep Gupta" class="avatar">
+    <h1>Jaideep Gupta</h1>
+    <p class="tagline">सर्वं डेटा माया अस्ति। – Everything is an illusion… of data.</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a freelance data analyst passionate about using statistics and visualization tools to bring stories to life. Skilled in Excel, Power BI, Tableau, R, Python, SQL, and more.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills & Tools</h2>
+    <div class="skills">
+      <div class="card">Visualization: Power BI, Tableau</div>
+      <div class="card">Languages: Python, R</div>
+      <div class="card">Databases: MySQL, MongoDB</div>
+      <div class="card">Stat Tools: Excel, SPSS, SAS, Minitab, STATA, EViews, JASP, Jamovi</div>
+      <div class="card">Others: Notion, Mixpanel, JMP, Gretl</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <a href="https://github.com/Jaydee778/excel-sales-dashboard" target="_blank" class="card">
+        <h3>Excel Sales Dashboard</h3>
+        <p>Store performance slicers, map charts, KPIs.</p>
+      </a>
+      <a href="https://github.com/Jaydee778/powerbi-sales-analysis" target="_blank" class="card">
+        <h3>Power BI Sales Analysis</h3>
+        <p>User-driven reports with DAX, slicers, drill-downs.</p>
+      </a>
+      <a href="https://github.com/Jaydee778/tableau-monthly-compliance" target="_blank" class="card">
+        <h3>Tableau Monthly Compliance</h3>
+        <p>Dashboards for user activity and visit trends.</p>
+      </a>
+      <a href="https://github.com/Jaydee778/python-casino-games" target="_blank" class="card">
+        <h3>Python Casino Games</h3>
+        <p>Fun interactive games using logic and randomization.</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <iframe src="Jaideep_Gupta.pdf" width="100%" height="500px" style="border: none; border-radius: 10px;"></iframe>
+    <a class="btn" href="Jaideep_Gupta.pdf" download>📄 Download Resume</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mwkgygvr" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© Jaideep Gupta 2025 • <a href="https://github.com/Jaydee778" target="_blank">GitHub</a></p>
+  </footer>
+</body>
+</html>
