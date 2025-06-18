@@ -1,22 +1,15 @@
 function toggleTheme() {
   const body = document.body;
-  const currentTheme = body.getAttribute('data-theme');
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
+  const current = body.getAttribute('data-theme');
+  const newTheme = current === 'dark' ? 'light' : 'dark';
   body.setAttribute('data-theme', newTheme);
 
-  // Sync toggle position
-  const toggleCheckbox = document.getElementById('themeToggle');
-  if (toggleCheckbox) {
-    toggleCheckbox.checked = newTheme === 'light';
-  }
+  const toggle = document.getElementById('themeToggle');
+  if (toggle) toggle.checked = newTheme === 'light';
 }
 
-// Optional: sync toggle state on page load
 window.addEventListener('DOMContentLoaded', () => {
-  const currentTheme = document.body.getAttribute('data-theme');
-  const toggleCheckbox = document.getElementById('themeToggle');
-  if (toggleCheckbox) {
-    toggleCheckbox.checked = currentTheme === 'light';
-  }
+  const theme = document.body.getAttribute('data-theme');
+  const toggle = document.getElementById('themeToggle');
+  if (toggle) toggle.checked = theme === 'light';
 });
