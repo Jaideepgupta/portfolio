@@ -27,7 +27,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Topbar */
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -51,7 +50,6 @@ body {
   color: var(--link-hover);
 }
 
-/* Slider Toggle */
 .toggle-switch {
   position: relative;
   display: inline-block;
@@ -102,7 +100,6 @@ body {
   content: "🌙";
 }
 
-/* Navbar */
 .navbar {
   background: var(--nav-bg);
   padding: 1rem 2rem;
@@ -134,7 +131,38 @@ body {
   border-bottom: 2px solid var(--accent);
 }
 
-/* Hero */
+.skills-sidebar {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  padding: 2rem 1rem;
+  background-color: var(--card-bg);
+  overflow-y: auto;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.skills-sidebar h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.skills-sidebar .skills .card {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background: var(--bg-color);
+}
+
+main {
+  margin-left: 270px;
+  padding: 1rem;
+}
+
 .hero.full-height {
   height: 90vh;
   display: flex;
@@ -178,7 +206,6 @@ body {
   background: var(--accent-hover);
 }
 
-/* Sections */
 section {
   padding: 3rem 2rem;
   max-width: 960px;
@@ -191,33 +218,28 @@ h2 {
   margin-bottom: 2rem;
 }
 
-/* Skills */
-.skills {
+.certificates {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
 }
 
-.card {
+.certificates a.card {
   background: var(--card-bg);
-  padding: 1.5rem;
+  color: var(--text-color);
+  padding: 1.2rem;
   border-radius: 1rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  transition: transform 0.3s ease;
+  box-shadow: 0 0 0.5rem rgba(0,0,0,0.2);
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.card:hover {
-  transform: scale(1.03);
+.certificates a.card:hover {
+  transform: scale(1.05);
+  background-color: var(--accent);
+  color: #fff;
 }
 
-.card-icon {
-  font-size: 1.8rem;
-}
-
-/* Projects */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -261,7 +283,6 @@ h2 {
   color: #ffffff;
 }
 
-/* Form & Resume */
 form {
   background: var(--card-bg);
   padding: 2rem;
@@ -297,7 +318,6 @@ input:focus, textarea:focus {
   background: var(--accent-hover);
 }
 
-/* Footer */
 footer {
   background: var(--card-bg);
   text-align: center;
@@ -314,7 +334,6 @@ footer a:hover {
   color: var(--accent-hover);
 }
 
-/* Back to Top */
 #back-to-top {
   position: fixed;
   bottom: 2rem;
