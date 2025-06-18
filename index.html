@@ -10,7 +10,6 @@
 </head>
 <body data-theme="dark">
 
-  <!-- 🌐 Top Contact Bar with Theme Toggle -->
   <div class="topbar">
     <div class="socials">
       <a href="https://github.com/Jaideepgupta" target="_blank"><i class="fab fa-github"></i> GitHub</a>
@@ -20,7 +19,6 @@
     <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
   </div>
 
-  <!-- 🔗 Navigation -->
   <nav class="navbar">
     <ul>
       <li><a href="#about">About</a></li>
@@ -31,20 +29,18 @@
     </ul>
   </nav>
 
-  <!-- 🎯 Hero -->
   <header class="hero">
     <img src="banner.png" alt="Jaideep Gupta" class="avatar" />
     <h1>Jaideep Gupta</h1>
-    <p class="tagline">“सर्वं डेटा माया अस्ति।” — Everything is an illusion… of data.</p>
+    <p class="tagline">“सर्वं डेटा माया अस्ति।” — Everything is an illusion… of data.
+    </p>
   </header>
 
-  <!-- 👤 About -->
   <section id="about">
     <h2>About Me</h2>
     <p>I’m a freelance data analyst passionate about using statistics and visualization tools to bring stories to life. Skilled in Excel, Power BI, Tableau, R, Python, SQL, and more.</p>
   </section>
 
-  <!-- 🛠️ Skills -->
   <section id="skills">
     <h2>Skills & Tools</h2>
     <div class="skills">
@@ -56,7 +52,6 @@
     </div>
   </section>
 
-  <!-- 📂 Projects -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects">
@@ -83,14 +78,12 @@
     </div>
   </section>
 
-  <!-- 📄 Resume -->
   <section id="resume">
     <h2>Resume</h2>
     <iframe src="Jaideep_Gupta.pdf" width="100%" height="500px" style="border: none; border-radius: 10px;"></iframe>
     <a class="btn" href="Jaideep_Gupta.pdf" download>📄 Download Resume</a>
   </section>
 
-  <!-- ✉️ Contact -->
   <section id="contact">
     <h2>Contact Me</h2>
     <form action="https://formspree.io/f/mwkgygvr" method="POST">
@@ -101,7 +94,6 @@
     </form>
   </section>
 
-  <!-- 👣 Footer -->
   <footer>
     <p>© Jaideep Gupta 2025</p>
     <div>
@@ -114,10 +106,7 @@
     </div>
   </footer>
 
-  <!-- ⬆️ Back to Top -->
   <button id="back-to-top" onclick="scrollToTop()">⬆️</button>
-
-  <!-- 🌙 Theme Toggle Script -->
   <script>
     function toggleTheme() {
       const currentTheme = document.body.getAttribute('data-theme');
@@ -139,24 +128,6 @@
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-
-    window.addEventListener('scroll', () => {
-      const sections = document.querySelectorAll('section');
-      const navLinks = document.querySelectorAll('.navbar a');
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 60) {
-          current = section.getAttribute('id');
-        }
-      });
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
-      });
-    });
   </script>
 </body>
 </html>
