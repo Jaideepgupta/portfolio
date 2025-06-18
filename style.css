@@ -100,7 +100,7 @@ form {
   border-radius: 1rem;
 }
 
-/* 🎯 ADDITIONS FOR SCROLL NAV & HERO SECTION */
+/* Navbar Styling */
 .navbar {
   background-color: var(--bg-color);
   padding: 1rem 2rem;
@@ -128,6 +128,8 @@ form {
 .navbar a:hover {
   color: var(--accent);
 }
+
+/* Hero Section */
 .hero {
   text-align: center;
   padding: 3rem 2rem 1rem 2rem;
@@ -138,7 +140,15 @@ form {
   box-shadow: 0 0 0.5rem var(--accent);
   margin-bottom: 1rem;
 }
+
+/* Section Fade In */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
