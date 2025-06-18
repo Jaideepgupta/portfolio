@@ -41,8 +41,12 @@ body {
   color: var(--text-color);
   text-decoration: none;
   margin-right: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   transition: color 0.3s ease;
 }
+
 .topbar .socials a:hover {
   color: var(--link-hover);
 }
@@ -54,11 +58,13 @@ body {
   width: 50px;
   height: 26px;
 }
+
 .toggle-switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
+
 .slider {
   position: absolute;
   cursor: pointer;
@@ -68,8 +74,9 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  transition: .4s;
+  transition: 0.4s;
 }
+
 .slider:before {
   position: absolute;
   content: "🌞";
@@ -82,11 +89,13 @@ body {
   text-align: center;
   font-size: 14px;
   line-height: 22px;
-  transition: .4s;
+  transition: 0.4s;
 }
+
 .toggle-switch input:checked + .slider {
   background-color: var(--accent);
 }
+
 .toggle-switch input:checked + .slider:before {
   transform: translateX(24px);
   content: "🌙";
@@ -99,8 +108,9 @@ body {
   position: sticky;
   top: 0;
   z-index: 999;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
 .navbar ul {
   list-style: none;
   display: flex;
@@ -109,19 +119,21 @@ body {
   padding: 0;
   margin: 0;
 }
+
 .navbar a {
   color: var(--text-color);
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
 }
+
 .navbar a:hover,
 .navbar a.active {
   color: var(--accent);
   border-bottom: 2px solid var(--accent);
 }
 
-/* Hero */
+/* Hero Section */
 .hero.full-height {
   height: 90vh;
   display: flex;
@@ -131,21 +143,25 @@ body {
   text-align: center;
   padding: 2rem;
 }
+
 .hero .avatar {
   width: 150px;
   border-radius: 50%;
   box-shadow: 0 0 0.5rem var(--accent);
   margin-bottom: 1rem;
 }
+
 .hero h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   margin: 0.2rem 0;
 }
+
 .hero .tagline {
   font-size: 1.2rem;
   color: var(--accent);
   margin-bottom: 1.5rem;
 }
+
 .hero .btn {
   background: var(--accent);
   color: white;
@@ -156,11 +172,12 @@ body {
   font-weight: bold;
   transition: background 0.3s ease;
 }
+
 .hero .btn:hover {
   background: var(--accent-hover);
 }
 
-/* Sections */
+/* Section Basics */
 section {
   padding: 3rem 2rem;
   max-width: 960px;
@@ -173,7 +190,7 @@ h2 {
   margin-bottom: 2rem;
 }
 
-/* Cards & Skills */
+/* Skills */
 .skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -184,15 +201,17 @@ h2 {
   background: var(--card-bg);
   padding: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 0 0.5rem rgba(0,0,0,0.15);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
   gap: 1rem;
   transition: transform 0.3s ease;
 }
+
 .card:hover {
   transform: scale(1.03);
 }
+
 .card-icon {
   font-size: 1.8rem;
 }
@@ -204,58 +223,51 @@ h2 {
   gap: 2rem;
 }
 
-.project-card {
-  position: relative;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+.projects a {
   text-decoration: none;
-  color: white;
   background: var(--card-bg);
-}
-.project-card .card-img img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.4s ease;
-}
-.project-card:hover .card-img img {
-  transform: scale(1.05);
-}
-.project-card .card-overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  padding: 1rem;
-  text-align: center;
-}
-.project-card:hover .card-overlay {
-  opacity: 1;
-}
-.card-overlay h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: #fff;
-}
-.card-overlay p {
-  font-size: 0.95rem;
-  color: #e0e0e0;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  color: var(--text-color);
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-/* Resume, Forms, Footer */
+.projects a:hover {
+  background: var(--accent);
+  color: #ffffff;
+  transform: translateY(-5px);
+}
+
+.projects a h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  transition: color 0.3s ease;
+}
+
+.projects a:hover h3 {
+  color: #ffffff;
+}
+
+.projects a p {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.projects a:hover p {
+  color: #ffffff;
+}
+
+/* Form & Resume */
 form {
   background: var(--card-bg);
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
 }
+
 input, textarea {
   width: 100%;
   padding: 0.75rem;
@@ -265,9 +277,11 @@ input, textarea {
   background: #2d3748;
   color: white;
 }
+
 input:focus, textarea:focus {
   outline: 2px solid var(--accent);
 }
+
 .btn {
   display: inline-block;
   background: var(--accent);
@@ -277,25 +291,29 @@ input:focus, textarea:focus {
   border-radius: 6px;
   cursor: pointer;
 }
+
 .btn:hover {
   background: var(--accent-hover);
 }
 
+/* Footer */
 footer {
   background: var(--card-bg);
   text-align: center;
   padding: 2rem;
   color: var(--text-color);
 }
+
 footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 footer a:hover {
   color: var(--accent-hover);
 }
 
-/* Back to Top */
+/* Back to Top (optional if used) */
 #back-to-top {
   position: fixed;
   bottom: 2rem;
@@ -309,6 +327,7 @@ footer a:hover {
   box-shadow: 0 0 10px var(--accent);
   cursor: pointer;
 }
+
 #back-to-top.show {
   display: block;
 }
