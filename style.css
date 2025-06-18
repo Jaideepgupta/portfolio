@@ -57,6 +57,7 @@ body {
   display: inline-block;
   width: 50px;
   height: 26px;
+  margin-left: auto;
 }
 
 .toggle-switch input {
@@ -133,7 +134,7 @@ body {
   border-bottom: 2px solid var(--accent);
 }
 
-/* Hero Section */
+/* Hero */
 .hero.full-height {
   height: 90vh;
   display: flex;
@@ -177,7 +178,7 @@ body {
   background: var(--accent-hover);
 }
 
-/* Section Basics */
+/* Sections */
 section {
   padding: 3rem 2rem;
   max-width: 960px;
@@ -313,7 +314,7 @@ footer a:hover {
   color: var(--accent-hover);
 }
 
-/* Back to Top (optional if used) */
+/* Back to Top */
 #back-to-top {
   position: fixed;
   bottom: 2rem;
