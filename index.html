@@ -1,33 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jaideep Gupta | Data Analyst</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body data-theme="dark">
-
+  <!-- Top Bar with Contact Info and Theme Toggle -->
   <div class="topbar">
     <div class="socials">
-      <a href="https://github.com/Jaideepgupta" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="https://www.linkedin.com/in/guptajaideep" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="mailto:jaideepg.jg@gmail.com"><i class="fas fa-envelope"></i> Gmail</a>
+      <a href="mailto:jaideepg.jg@gmail.com">📧 jaideepg.jg@gmail.com</a>
+      <a href="https://www.linkedin.com/in/guptajaideep" target="_blank">🔗 LinkedIn</a>
+      <a href="https://github.com/Jaideepgupta" target="_blank">🐱 GitHub</a>
     </div>
-    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
   </div>
 
-  <header class="hero full-height">
-    <div class="hero-content">
-      <img src="banner.png" alt="Jaideep Gupta" class="avatar" />
-      <h1>Jaideep Gupta</h1>
-      <p class="tagline">Turning data into insights, one chart at a time.</p>
-      <a href="#projects" class="btn">📁 View Projects</a>
-    </div>
-  </header>
-
+  <!-- Navigation Bar -->
   <nav class="navbar">
     <ul>
       <li><a href="#about">About</a></li>
@@ -38,11 +29,23 @@
     </ul>
   </nav>
 
+  <!-- Hero Section -->
+  <header class="hero full-height">
+    <div>
+      <img src="banner.png" alt="Jaideep Gupta" class="avatar">
+      <h1>Jaideep Gupta</h1>
+      <p class="tagline">सर्वं डेटा माया अस्ति – Everything is an illusion… of data.</p>
+      <a href="#projects" class="btn">View Projects</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
     <p>I’m a freelance data analyst passionate about using statistics and visualization tools to bring stories to life. Skilled in Excel, Power BI, Tableau, R, Python, SQL, and more.</p>
   </section>
 
+  <!-- Skills Section -->
   <section id="skills">
     <h2>Skills & Tools</h2>
     <div class="skills">
@@ -54,38 +57,41 @@
     </div>
   </section>
 
+  <!-- Projects Section -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects">
-      <a href="https://github.com/Jaydee778/Business_Insights_360" target="_blank" class="project-card">
-        <div class="card-img"><img src="img/powerbi_dashboard.png" alt="Power BI Dashboard" /></div>
-        <div class="card-overlay"><h3>Power BI Sales Dashboard</h3><p>Explore sales KPIs with slicers and visuals</p></div>
+      <a href="https://github.com/Jaydee778/Business_Insights_360" target="_blank" class="card">
+        <h3>Power BI Sales Dashboard</h3>
+        <p>Interactive dashboards to uncover key sales insights and KPIs.</p>
       </a>
-      <a href="https://github.com/Jaydee778/Excel-Sales-Analytics" target="_blank" class="project-card">
-        <div class="card-img"><img src="img/excel_dashboard.png" alt="Excel Analytics" /></div>
-        <div class="card-overlay"><h3>Excel Financial Report</h3><p>Profit & loss dashboard in advanced Excel</p></div>
+      <a href="https://github.com/Jaydee778/Excel-Sales-Analytics" target="_blank" class="card">
+        <h3>Excel Financial Report</h3>
+        <p>Created profit/loss and market performance dashboards in Excel.</p>
       </a>
-      <a href="https://github.com/jaideepgpt/tableau-healthcare-insights" target="_blank" class="project-card">
-        <div class="card-img"><img src="img/tableau_health.png" alt="Tableau Healthcare" /></div>
-        <div class="card-overlay"><h3>Tableau Healthcare Insights</h3><p>Patient trends and compliance analytics</p></div>
+      <a href="https://github.com/jaideepgpt/tableau-healthcare-insights" target="_blank" class="card">
+        <h3>Tableau Healthcare Insights</h3>
+        <p>Data story showing trends in healthcare visits and compliance.</p>
       </a>
-      <a href="https://github.com/Jaydee778/Casino-Odyssey" target="_blank" class="project-card">
-        <div class="card-img"><img src="img/python_casino.png" alt="Casino Games" /></div>
-        <div class="card-overlay"><h3>Python Casino Games</h3><p>Fun simulations using probabilities</p></div>
+      <a href="https://github.com/Jaydee778/Casino-Odyssey/tree/main" target="_blank" class="card">
+        <h3>Python Casino Games</h3>
+        <p>Fun and interactive probability-based casino game simulations.</p>
       </a>
-      <a href="https://www.youtube.com/channel/UCMU9RMjwpglKIhV7HZ0m_5w" target="_blank" class="project-card">
-        <div class="card-img"><img src="img/youtube_stats.png" alt="Stats YouTube" /></div>
-        <div class="card-overlay"><h3>Stats with JD – YouTube</h3><p>Video tutorials on SPSS, Excel & stats</p></div>
+      <a href="https://www.youtube.com/channel/UCMU9RMjwpglKIhV7HZ0m_5w" target="_blank" class="card">
+        <h3>Stats with JD – YouTube</h3>
+        <p>Educational videos on statistics, SPSS, Excel, and Python for learners.</p>
       </a>
     </div>
   </section>
 
+  <!-- Resume Section -->
   <section id="resume">
     <h2>Resume</h2>
     <iframe src="Jaideep_Gupta.pdf" width="100%" height="500px" style="border: none; border-radius: 10px;"></iframe>
     <a class="btn" href="Jaideep_Gupta.pdf" download>📄 Download Resume</a>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Me</h2>
     <form action="https://formspree.io/f/mwkgygvr" method="POST">
@@ -96,40 +102,9 @@
     </form>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© Jaideep Gupta 2025</p>
-    <div>
-      <a href="https://www.linkedin.com/in/guptajaideep" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a> |
-      <a href="https://github.com/Jaideepgupta" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-    </div>
+    <p>© Jaideep Gupta 2025 • <a href="https://github.com/Jaideepgupta" target="_blank">GitHub</a></p>
   </footer>
-
-  <button id="back-to-top" onclick="scrollToTop()">⬆️</button>
-  <script>
-    function toggleTheme() {
-      const currentTheme = document.body.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      document.body.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-    }
-
-    window.onload = () => {
-      const savedTheme = localStorage.getItem('theme') || 'dark';
-      document.body.setAttribute('data-theme', savedTheme);
-    };
-
-    const topBtn = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) topBtn.classList.add('show');
-      else topBtn.classList.remove('show');
-    });
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script>
 </body>
 </html>
